@@ -1,0 +1,209 @@
+/* Portfolio/Project Section Alignment Fix */
+
+/* --- HOME PAGE LIST VIEW --- */
+
+/* Ensure all project blocks align properly in vertical list */
+.project-section-h2 .project-h2_inner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.project-section-h2 .project-block {
+    width: 100%;
+    margin-bottom: 30px !important; /* Explicit vertical spacing */
+    display: block !important;
+    position: relative !important; /* Force normal flow */
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    float: none !important;
+    clear: both !important;
+    transform: none !important; /* remove any transform shifts */
+    z-index: 1 !important; /* Ensure base stacking level */
+}
+
+.project-section-h2 .project-block .inner-block {
+    margin-bottom: 0 !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent content spill */
+}
+
+/* Fix row to behave well */
+.project-section-h2 .project-block .inner-block .row {
+    min-height: 350px;
+    margin: 0; /* Bootstrap row fix */
+    display: flex; /* Ensure flex behavior */
+}
+
+/* Content box consistent height and background */
+.project-section-h2 .project-block .inner-block .content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    height: auto;
+    min-height: 350px;
+    background: #fff; /* Ensure solid background */
+    position: relative;
+    z-index: 10; /* Ensure it sits on top */
+}
+
+/* Image box consistent height */
+.project-section-h2 .project-block .inner-block .image-box {
+    padding: 0; /* Remove padding if any */
+    height: auto;
+    min-height: 350px;
+    display: flex;
+    overflow: hidden; /* Ensure image doesn't spill */
+    position: relative;
+    z-index: 1;
+}
+
+.project-section-h2 .project-block .inner-block .image-box .image {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    position: relative;
+    display: block;
+}
+
+.project-section-h2 .project-block .inner-block .image-box .image img {
+    position: absolute; /* Absolute ensure full coverage */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important; /* Force cover */
+    z-index: 1;
+}
+
+/* Ensure the inner block itself is solid */
+.project-section-h2 .project-block .inner-block {
+    margin-bottom: 0 !important;
+    height: 100%;
+    display: flex;
+    background: #fff;
+    flex-direction: column;
+    overflow: hidden; /* Prevent content spill */
+    position: relative;
+}
+
+
+/* --- PORTFOLIO PAGE GRID VIEW --- */
+
+/* Ensure grid items match height */
+.project-block-h1 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-block-h1 .inner-block {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 15px; /* Consistent rounded corners */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+    position: relative !important; /* Ensure context */
+}
+
+.project-block-h1 .image {
+    flex-shrink: 0; /* Prevent image shrinking */
+    height: 250px;
+    width: 100%;
+    position: relative;
+    /* Reset any transformative hover effects that might hide images */
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.project-block-h1 .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Reset blur or opacity transitions */
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+}
+
+.project-block-h1 .content-box {
+    flex-grow: 1; /* Allow content to grow/fill */
+    display: flex;
+    flex-direction: column;
+    padding: 25px; /* Consistent padding */
+    position: relative !important; /* OVERRIDE ABSOLUTE POSITIONING */
+    bottom: auto !important;
+    left: auto !important;
+    background: #fff !important; 
+    opacity: 1 !important;
+    transform: none !important;
+    z-index: 1 !important;
+}
+
+.project-block-h1 .inner-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push arrow/link to bottom */
+}
+
+.project-block-h1 .content {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Enforce vertical alignment for text elements */
+.project-block-h1 .sub-title {
+    min-height: 1.5em !important; /* Ensure single line height is reserved */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.project-block-h1 .title {
+    min-height: 3.0em !important; /* Reserve space for 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2; /* Standard property */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.project-block-h1 p {
+    margin-bottom: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+/* --- RESPONSIVE FIXES --- */
+@media (max-width: 991.98px) {
+    /* Reset heights for mobile stacking */
+    .project-section-h2 .project-block .inner-block .row,
+    .project-section-h2 .project-block .inner-block .content-box,
+    .project-section-h2 .project-block .inner-block .image-box,
+    .project-section-h2 .project-block .inner-block .image-box .image,
+    .project-section-h2 .project-block .inner-block .image-box .image img {
+        min-height: 250px; /* Smaller height for mobile */
+        position: relative; /* Reset positioning */
+        height: auto;
+    }
+    
+    .project-section-h2 .project-block .inner-block .image-box .image img {
+        height: 250px; /* Fixed height for image */
+    }
+}
+

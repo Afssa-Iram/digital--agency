@@ -1,0 +1,93 @@
+/* Navbar Text Color Override - Make all navbar text black */
+
+/* Main navigation links */
+.navbar .nav-link,
+.main-header .navigation > li > a,
+.main-header .navigation a {
+    color: #000000 !important;
+}
+
+.navbar .nav-link:hover,
+.main-header .navigation > li > a:hover,
+.main-header .navigation a:hover {
+    color: #FF3838 !important;
+}
+
+.navbar .nav-link.active,
+.main-header .navigation > li.current > a {
+    color: #FF3838 !important;
+}
+
+/* Logo text - Make Webtec/DigiAgency black */
+.navbar .text-gradient,
+.main-header .logo a,
+.main-header .logo span,
+.main-header .logo,
+.logo-box .logo a,
+.logo-box .logo span,
+.nav-logo a,
+.nav-logo span {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+    background: none !important;
+}
+
+/* Dropdown button text */
+.navbar button {
+    color: #000000 !important;
+}
+
+/* Mobile menu text */
+.navbar .text-indigo-900,
+.navbar .text-indigo-700,
+.navbar .text-indigo-600 {
+    color: #000000 !important;
+}
+
+/* Responsive nav links */
+.navbar x-responsive-nav-link,
+.navbar [class*="responsive-nav"] {
+    color: #000000 !important;
+}
+
+/* Icons in navbar */
+.navbar i {
+    color: #000000 !important;
+}
+
+/* Hamburger menu icon */
+.navbar svg {
+    stroke: #000000 !important;
+}
+
+/* Login/Register links */
+.navbar a {
+    color: #000000 !important;
+}
+
+/* Keep button backgrounds as they are, just fix text */
+.navbar .btn-primary,
+.main-header .theme-btn {
+    color: #ffffff !important;
+}
+
+/* User dropdown text */
+.navbar .font-bold,
+.navbar .font-medium {
+    color: #000000 !important;
+}
+
+/* Webtec Layout Specific Overrides */
+.main-header .logo span {
+    color: #000000 !important;
+}
+
+.main-header .mobile-nav-toggler .icon {
+    color: #000000 !important;
+}
+
+/* Mobile menu navigation */
+.mobile-menu .navigation li a {
+    color: #000000 !important;
+}
+
