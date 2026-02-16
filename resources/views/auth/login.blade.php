@@ -6,71 +6,72 @@
     </div>
 
     <!-- Session Status -->
-    <x-auth-session-status class="success-message" :status="session('status')" />
+    <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
         <!-- Email Address -->
         <div class="input-group">
-            <label for="email">
-                <i class="fas fa-envelope" style="margin-right: 0.5rem; color: var(--auth-primary);"></i>
-                Email Address
-            </label>
-            <input 
-                id="email" 
-                type="email" 
-                name="email" 
-                value="{{ old('email') }}" 
-                required 
-                autofocus 
-                autocomplete="username"
-                placeholder="Enter your email"
-            />
+            <label for="email" class="input-label">Email Address</label>
+            <div class="input-wrapper">
+                <input 
+                    id="email" 
+                    type="email" 
+                    name="email" 
+                    value="{{ old('email') }}" 
+                    required 
+                    autofocus 
+                    autocomplete="username"
+                    placeholder="name@example.com"
+                />
+                <i class="fas fa-envelope input-icon"></i>
+            </div>
             <x-input-error :messages="$errors->get('email')" class="error-message" />
         </div>
 
         <!-- Password -->
         <div class="input-group">
-            <label for="password">
-                <i class="fas fa-lock" style="margin-right: 0.5rem; color: var(--auth-primary);"></i>
-                Password
-            </label>
-            <input 
-                id="password" 
-                type="password" 
-                name="password" 
-                required 
-                autocomplete="current-password"
-                placeholder="Enter your password"
-            />
+            <label for="password" class="input-label">Password</label>
+            <div class="input-wrapper">
+                <input 
+                    id="password" 
+                    type="password" 
+                    name="password" 
+                    required 
+                    autocomplete="current-password"
+                    placeholder="Enter your password"
+                />
+                <i class="fas fa-lock input-icon"></i>
+            </div>
             <x-input-error :messages="$errors->get('password')" class="error-message" />
         </div>
 
         <!-- Remember Me -->
         <div class="checkbox-group">
-            <input id="remember_me" type="checkbox" name="remember">
-            <label for="remember_me">{{ __('Remember me') }}</label>
+            <label for="remember_me" class="custom-checkbox">
+                <input id="remember_me" type="checkbox" name="remember">
+                <span class="checkmark"></span>
+                {{ __('Remember me') }}
+            </label>
         </div>
 
         <!-- Submit Button -->
         <button type="submit" class="btn-premium">
-            <i class="fas fa-sign-in-alt" style="margin-right: 0.5rem;"></i>
             {{ __('Log in') }}
+            <i class="fas fa-arrow-right"></i>
         </button>
 
         <!-- Links -->
-        <div class="form-links">
+        <div class="form-footer">
             @if (Route::has('password.request'))
-                <a href="{{ route('password.request') }}">
-                    <i class="fas fa-key" style="margin-right: 0.25rem;"></i>
+                <a class="link" href="{{ route('password.request') }}">
                     {{ __('Forgot password?') }}
                 </a>
             @endif
             
             @if (Route::has('register'))
-                <a href="{{ route('register') }}">
-                    <i class="fas fa-user-plus" style="margin-right: 0.25rem;"></i>
+                <a class="link-primary" href="{{ route('register') }}">
                     Create account
                 </a>
             @endif
@@ -94,4 +95,3 @@
         </div>
     </form>
 </x-guest-layout>
-

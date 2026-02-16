@@ -34,8 +34,8 @@
         </div>
 
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0" style="position: relative; z-index: 10;">
-            <div class="reveal-on-scroll active logo-container">
-                <a href="/" style="text-decoration: none; display: flex; align-items: center; gap: 1rem;">
+            <div class="logo-container">
+                <a href="/" class="flex flex-col items-center gap-4 no-underline">
                     <div class="logo-icon">
                         <i class="fas fa-rocket"></i>
                     </div>

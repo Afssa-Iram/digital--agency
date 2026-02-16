@@ -346,7 +346,7 @@
               <div class="ks-choose-2-content">
                 <div class="sec-title-h1 white">
                   <h6 class="sub-title">why choose us</h6>
-                  <h2 class="title char-animation">Why You Should Choose Us?</h2>
+                  <h2 class="title char-animation" style="color: #000;">Why You Should Choose Us?</h2>
                 </div>
                 <div class="ks_fade_anim" data-delay=".3">
                   <p>We provide award-winning digital solutions with a focus on ROI and innovation.</p>
@@ -396,7 +396,7 @@
             </div>
           </div>
           <div class="image-column col-xl-6">
-             <figure class="image"><img src="{{ asset('images/resource/faq1-1.png') }}" alt=""></figure>
+             <figure class="image"><img src="{{ asset('images/faq1-1.png') }}" alt="" style="opacity: 1;"></figure>
           </div>
         </div>
       </div>
@@ -404,6 +404,7 @@
 
     <!-- testimonial-area-start -->
     <div class="ks-testimonial-area home2-style">
+        <div class="bg-image"><img src="{{ asset('images/testi-h2-1.jpg') }}" alt="" style="opacity: 0.8;"></div>
         <div class="auto-container">
             <div class="sec-title-h2 text-center">
                 <h6 class="sub-title">Testimonials</h6>
@@ -432,7 +433,7 @@
 
     <!-- contact section h2 -->
     <section class="contact-section-h2 py-100">
-        <div class="bg-image"><img src="{{ asset('images/resource/contact1-1.jpg') }}" alt="" style="opacity: 0.1; filter: grayscale(1);"></div>
+        <div class="bg-image"><img src="{{ asset('images/resource/contact1-1.jpg') }}" alt="" style="opacity: 1; filter: grayscale(1);"></div>
         <div class="auto-container">
             <div class="row align-items-center">
                 <div class="content-column col-lg-6">

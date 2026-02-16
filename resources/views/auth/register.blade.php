@@ -10,85 +10,84 @@
 
         <!-- Name -->
         <div class="input-group">
-            <label for="name">
-                <i class="fas fa-user" style="margin-right: 0.5rem; color: var(--auth-primary);"></i>
-                Full Name
-            </label>
-            <input 
-                id="name" 
-                type="text" 
-                name="name" 
-                value="{{ old('name') }}" 
-                required 
-                autofocus 
-                autocomplete="name"
-                placeholder="Enter your full name"
-            />
+            <label for="name" class="input-label">Full Name</label>
+            <div class="input-wrapper">
+                <input 
+                    id="name" 
+                    type="text" 
+                    name="name" 
+                    value="{{ old('name') }}" 
+                    required 
+                    autofocus 
+                    autocomplete="name"
+                    placeholder="Enter your full name"
+                />
+                <i class="fas fa-user input-icon"></i>
+            </div>
             <x-input-error :messages="$errors->get('name')" class="error-message" />
         </div>
 
         <!-- Email Address -->
         <div class="input-group">
-            <label for="email">
-                <i class="fas fa-envelope" style="margin-right: 0.5rem; color: var(--auth-primary);"></i>
-                Email Address
-            </label>
-            <input 
-                id="email" 
-                type="email" 
-                name="email" 
-                value="{{ old('email') }}" 
-                required 
-                autocomplete="username"
-                placeholder="Enter your email"
-            />
+            <label for="email" class="input-label">Email Address</label>
+            <div class="input-wrapper">
+                <input 
+                    id="email" 
+                    type="email" 
+                    name="email" 
+                    value="{{ old('email') }}" 
+                    required 
+                    autocomplete="username"
+                    placeholder="Enter your email"
+                />
+                <i class="fas fa-envelope input-icon"></i>
+            </div>
             <x-input-error :messages="$errors->get('email')" class="error-message" />
         </div>
 
         <!-- Password -->
         <div class="input-group">
-            <label for="password">
-                <i class="fas fa-lock" style="margin-right: 0.5rem; color: var(--auth-primary);"></i>
-                Password
-            </label>
-            <input 
-                id="password" 
-                type="password" 
-                name="password" 
-                required 
-                autocomplete="new-password"
-                placeholder="Create a password"
-            />
+            <label for="password" class="input-label">Password</label>
+            <div class="input-wrapper">
+                <input 
+                    id="password" 
+                    type="password" 
+                    name="password" 
+                    required 
+                    autocomplete="new-password"
+                    placeholder="Create a password"
+                />
+                <i class="fas fa-lock input-icon"></i>
+            </div>
             <x-input-error :messages="$errors->get('password')" class="error-message" />
         </div>
 
         <!-- Confirm Password -->
         <div class="input-group">
-            <label for="password_confirmation">
-                <i class="fas fa-lock" style="margin-right: 0.5rem; color: var(--auth-primary);"></i>
-                Confirm Password
-            </label>
-            <input 
-                id="password_confirmation" 
-                type="password" 
-                name="password_confirmation" 
-                required 
-                autocomplete="new-password"
-                placeholder="Confirm your password"
-            />
+            <label for="password_confirmation" class="input-label">Confirm Password</label>
+            <div class="input-wrapper">
+                <input 
+                    id="password_confirmation" 
+                    type="password" 
+                    name="password_confirmation" 
+                    required 
+                    autocomplete="new-password"
+                    placeholder="Confirm your password"
+                />
+                <i class="fas fa-lock input-icon"></i>
+            </div>
             <x-input-error :messages="$errors->get('password_confirmation')" class="error-message" />
         </div>
 
         <!-- Submit Button -->
         <button type="submit" class="btn-premium">
-            <i class="fas fa-user-plus" style="margin-right: 0.5rem;"></i>
             {{ __('Create Account') }}
+            <i class="fas fa-arrow-right"></i>
         </button>
 
         <!-- Links -->
-        <div class="form-links" style="justify-content: center;">
-            <a href="{{ route('login') }}">
-                <i class="fas fa-sign-in-alt" style="margin-right: 0.25rem;"></i>
+        <div class="form-footer" style="justify-content: center;">
+            <a href="{{ route('login') }}" class="link">
                 {{ __('Already have an account? Sign in') }}
             </a>
         </div>
@@ -111,4 +110,3 @@
         </div>
     </form>
 </x-guest-layout>
-
